@@ -11,6 +11,7 @@ var body, blockSize, GameLayer = [],
     GameTimeLayer;
 var transform, transitionDuration;
 var a = 0;
+var b = Math.round(Math.random() * 5);
 function init() {
     showWelcomeLayer();
     body = document.getElementById('gameBody') || document.body;
@@ -114,9 +115,10 @@ function gameInit() {
         id: "tap"
     });
     createjs.Sound.registerSound({
-        src: "./static/music/bgm.mp3",
+        src: "./static/music/"+b+".mp3",
         id: "bgm"
     });
+  
     gameRestart();
 }
 
